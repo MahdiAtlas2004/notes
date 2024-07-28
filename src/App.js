@@ -1,10 +1,17 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Notes from './pages/Notes';
+import CreateNote from './pages/CreateNote';
+
 
 function App() {
   return (
-    <div className="App">
-      Notes
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Notes />}/>
+        <Route path='create-note' element={<CreateNote />}/>
+        <Route path='/edit-note/:id' element={<EditNote />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
