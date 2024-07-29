@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Notes from './pages/Notes';
 import CreateNote from './pages/CreateNote';
+import EditNote from './pages/EditNote';
 
 
 function App() {
