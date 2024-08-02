@@ -40,6 +40,8 @@ const useCreateDate = () => {
     case 11:
       monthName = "Dec";
       break;
+    default:
+      monthName = "";
   }
 
   const date = `${monthName} ${dateObj.getDate()}, ${dateObj.getFullYear()} [${dateObj.getHours()}:${dateObj.getMinutes()}]`;
