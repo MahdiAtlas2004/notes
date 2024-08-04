@@ -28,19 +28,29 @@ const EditNote = ({ notes, setNotes }) => {
     navigate("/");
   };
 
+  const handleDelete = () => {
+    const newNotes = notes.filter((item) => item.id !== id);
+    setNotes(newNotes);
+    // Redirect user to home page.
+    navigate("/");
+  };
+
   return (
     <section>
       <header className="create-note__header">
         <Link to="/" className="btn">
           <IoIosArrowBack />
         </Link>
+        {/* Save button */}
         <button className="btn lg primary" onClick={handleSubmit}>
           Save
         </button>
-        <button className="btn lg danger">
+        {/* Delete button */}
+        <button className="btn lg danger" onClick={handleDelete}>
           <RiDeleteBin6Line />
         </button>
       </header>
+      {/* Form that takes inputs from user. */}
       <form className="create-note__form" onSubmit={handleSubmit}>
         <input
           type="text"
