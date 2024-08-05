@@ -28,6 +28,7 @@ body {
 }
 
 .btn {
+    display: flex;
     background: var(--color-bg-dark);
     border-radius: 0.8rem;
     padding: 0.8rem;
@@ -150,6 +151,7 @@ h2 {
 }
 
 .btn.add__btn {
+    display: flex;
     position: fixed;
     bottom: 4rem;
     right: 7rem;
