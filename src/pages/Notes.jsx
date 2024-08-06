@@ -10,17 +10,13 @@ const Notes = ({ notes }) => {
   const [text, setText] = useState("");
   const [filteredNotes, setFilteredNotes] = useState(notes);
 
-  const handleSearch = () => {
-    setFilteredNotes(
-      notes.filter((note) => (
-        note.title.toLowerCase().includes(text.toLowerCase())
-      ))
-    );
-  };
-
   useEffect(() => {
-    handleSearch();
-  });
+    setFilteredNotes(
+      notes.filter((note) =>
+        note.title.toLowerCase().includes(text.toLowerCase())
+      )
+    );
+  }, [text, notes]);
 
   return (
     <section>
@@ -33,10 +29,7 @@ const Notes = ({ notes }) => {
             autoFocus
             placeholder="Keyword..."
             value={text}
-            onChange={(e) => {
-              setText(e.target.value);
-              handleSearch();
-            }}
+            onChange={(e) => setText(e.target.value)}
           />
         )}
         <button
