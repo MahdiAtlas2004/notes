@@ -78,11 +78,6 @@ h2 {
     font-size: 2rem;
 }
 
-
-
-
-
-
 /* NOTES PAGE */
 .notes__header {
     display: flex;
@@ -212,7 +207,7 @@ h2 {
     }
 
     .btn.add__btn {
-        padding: 1.5rem;
+        padding: 1rem;
         font-size: 1.5rem;
         bottom: 6%;
         right: 2rem;
