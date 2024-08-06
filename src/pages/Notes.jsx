@@ -20,7 +20,7 @@ const Notes = ({ notes }) => {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+  });
 
   return (
     <section>
