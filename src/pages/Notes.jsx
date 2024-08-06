@@ -12,15 +12,15 @@ const Notes = ({ notes }) => {
 
   const handleSearch = () => {
     setFilteredNotes(
-      notes.filter((note) => {
-        return note.title.toLowerCase().includes(text.toLowerCase());
-      })
+      notes.filter((note) => (
+        note.title.toLowerCase().includes(text.toLowerCase())
+      ))
     );
   };
 
   useEffect(() => {
     handleSearch();
-  }, [text, notes]);
+  }, []);
 
   return (
     <section>
